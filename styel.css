@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: #f4f4f4; /* Added for a better visual background */
+    margin: 0;
+    padding: 20px;
+}
+
+.title {
+    grid-column: 1 / -1; /* This makes the title span all columns of the grid */
+    text-align: center;
+    color: #333;
+}
+
+.grid-container {
+    /* Set up the main grid container */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates a 2-column layout */
+    gap: 20px; /* Adds space between the grid items */
+    max-width: 900px; /* Optional: Constrains the width for better readability */
+    margin: 0 auto; /* Optional: Centers the grid container */
+}
+
+.emoji {
+    /* Style for each individual emoji card */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    
+    /* Use flexbox to arrange the content inside the card */
+    display: flex;
+    flex-direction: column; /* Stacks the items vertically */
+    justify-content: space-between; /* Pushes content to the top and bottom */
+}
+
+.icon {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.emoji h2 {
+    margin: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #ccc;
+}
+
+.emoji p {
+    flex-grow: 1; /* Allows the paragraph to grow and fill available space */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.emoji a {
+    text-decoration: none;
+    background-color: #781BAA;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block; /* Ensures the link respects padding and margin */
+    margin-top: auto; /* A key property that pushes the link to the bottom */
+}
